@@ -10,7 +10,7 @@ export default function SignUp() {
   const router = useRouter();
 
   return (
-    <div className="flex flex-col w-full space-y-4 items-center justify-center font-poppins">
+    <div className="flex flex-col w-full space-y-4 items-center justify-center font-open-sans">
       {/* Logo and title */}
       <div className="flex flex-col space-y-2 justify-center items-center">
         <Image
@@ -22,7 +22,7 @@ export default function SignUp() {
         />
 
         <div className="space-y-1 flex flex-col justify-center items-center">
-          <h1 className="text-2xl font-semibold">Get Started Now</h1>
+          <h1 className="text-2xl font-semibold font-poppins">Get Started Now</h1>
           <p className="text-sm font-open-sans">Create an account to explore our app</p>
         </div>
 
@@ -63,7 +63,7 @@ export default function SignUp() {
       {/* Divider */}
       <div className="flex flex-col justify-center items-center w-full">
         <div className="top-3 relative w-4/5 h-[1px] bg-black" />
-        <h1 className="text-sm bg-secondary z-1 font-open-sans px-2">or continue with</h1>
+        <h1 className="text-sm bg-secondary z-1 px-2">or continue with</h1>
       </div>
 
       {/* OAuth Buttons */}
