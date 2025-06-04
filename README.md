@@ -82,3 +82,35 @@ git push -u origin <your_branch_name>
 **14.** Click on `Create Pull Request`.
 
 **15.** Wait for your pull request to be reviewed and merged into the main branch.
+
+## Design System
+
+This project uses a custom design system configured in `tailwind.config.ts`:
+
+### Colors
+- **Brand:** `primary` (#00A6FB), `secondary` (#E8F1F2)
+- **State:** `info` (#2F80ED), `success` (#27AE60), `warning` (#E2B93B), `error` (#B00020)
+- **Accent:** `accent1`, `accent2` (#FF5733)
+- **Text:** `gray1` (#333333), `gray2` (#666666)
+
+### Typography
+- **Headings:** Poppins (Google Fonts)
+  - h1: 56px/61.6px
+  - h2: 48px/52.8px
+  - h3: 40px/44px
+  - h4: 32px/35.2px
+  - h5: 24px/26.4px
+  - h6: 20px/22px
+- **Body:** Open Sans (Google Fonts)
+  - Large: 20px/28px
+  - Medium: 18px/25.2px
+  - Normal: 16px/22.4px
+  - Small: 14px/19.6px
+
+### Grid System
+- **Desktop HD:** 12 columns, 65px width, 30px gutter
+- **Desktop:** 12 columns, 50px width, 30px gutter
+- **Tablet:** 6 columns, 88px width, 30px gutter
+- **Mobile:** 2 columns, 130px width, 30px gutter
+
+Use the custom Tailwind classes (e.g., `text-primary`, `font-heading`, `container`, `gap-grid`, etc.) to apply these styles in your components.

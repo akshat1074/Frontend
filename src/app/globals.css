@@ -1,15 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@400;700&display=swap');
 @import "tailwindcss";
 
 :root {
+  /* Brand Colors */
+  --color-primary: #00A6FB;
+  --color-primary-tint: #66ACCF;
+  --color-secondary: #E8F1F2;
+  /* State Colors */
+  --color-info: #2F80ED;
+  --color-success: #27AE60;
+  --color-warning: #E2B93B;
+  --color-error: #B00020;
+  /* Accent/Highlight Colors */
+  --color-accent1: #FF5733;
+  --color-accent2: #FF5733; /* Style 2 is a gradient, use base color for now */
+  --color-accent: #F4F4F4;
+  --color-highlight: #FF5733;
+  /* Text Colors */
+  --color-gray1: #333333;
+  --color-gray2: #666666;
+  --color-type-high: #333333;
+  --color-type-low: #626262;
+  --color-light-text: #666666;
+  /* Greys & Utility */
+  --color-dark: #13101E;
+  --color-bright: #FFFFFF;
+  --color-grey: #F1F1F1;
   --background: #ffffff;
   --foreground: #171717;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary: var(--color-primary);
+  --color-primary-tint: var(--color-primary-tint);
+  --color-secondary: var(--color-secondary);
+
+  /* state colors */
+  --color-info: var(--color-info);
+  --color-success: var(--color-success);
+  --color-warning: var(--color-warning);
+  --color-error: var(--color-error);
+
+  /* accent colors */
+  --color-accent1: var(--color-accent1);
+  --color-accent2: var(--color-accent2);
+  --color-accent: var(--color-accent);
+  --color-highlight: var(--color-highlight);
+
+  /* text colors */
+  --color-type-high: var(--color-type-high);
+  --color-type-low: var(--color-type-low);
+  --color-light-text: var(--color-light-text);
+  --color-gray1: var(--color-gray1);
+  --color-gray2: var(--color-gray2);
+
+  /* greys & utility */
+  --color-dark: var(--color-dark);
+  --color-bright: var(--color-bright);
+  --color-grey: var(--color-grey);
+  --background: var(--background);
+  --foreground: var(--foreground);
+
+  /* font */
+  --font-sans: var(--font-poppins);
+  --font-mono: var(--font-open-sans);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,5 +76,9 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
 }
