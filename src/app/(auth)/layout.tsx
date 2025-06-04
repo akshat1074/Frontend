@@ -1,6 +1,5 @@
 import { Container } from "@/components/ui/container";
 import Carousel from "@/components/ui/image-carousel";
-import Image from "next/image";
 
 const images = [
     { src: "/login/1.svg", alt: "logo 1", title: "Learn, Earn, and Grow with Ed3Hub", description: "Join a blockchain-powered learning platform where education meets innovation" },

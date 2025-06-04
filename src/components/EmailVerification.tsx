@@ -1,14 +1,12 @@
 import React, { useRef, useState } from "react";
 import { Button } from "./ui/button";
-import Image from "next/image";
 
 interface EmailVerificationProps {
   onVerify: (otp: string) => void;
   onResend?: () => void;
-  ref?: React.Ref<HTMLInputElement>;
 }
 
-const EmailVerification: React.FC<EmailVerificationProps> = ({ onVerify, onResend, ref }) => {
+const EmailVerification: React.FC<EmailVerificationProps> = ({ onVerify, onResend }) => {
   const [otp, setOtp] = useState(["", "", "", "", "", ""]);
   const inputsRef = useRef<Array<HTMLInputElement | null>>([]);
 
@@ -51,7 +49,7 @@ const EmailVerification: React.FC<EmailVerificationProps> = ({ onVerify, onResen
           {otp.map((digit, idx) => (
             <input
               key={idx}
-              // @ts-ignore
+              // @ts-expect-error ref is not typed
               ref={el => (inputsRef.current[idx] = el)}
               type="text"
               inputMode="numeric"
@@ -65,7 +63,7 @@ const EmailVerification: React.FC<EmailVerificationProps> = ({ onVerify, onResen
           ))}
         </div>
         <div className="mb-4">
-          <span>Didn't receive code? </span>
+          <span>Didn&apos;t receive code? </span>
           <button
             type="button"
             className="text-primary hover:underline focus:outline-none"

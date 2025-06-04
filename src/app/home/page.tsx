@@ -1,6 +1,6 @@
 import { Container } from "@/components/ui/container";
 
-export default function Dashboard() {
+export default function Home() {
   return (
     <Container className="text-black min-h-screen">
       <div className="flex flex-col justify-center items-center">
