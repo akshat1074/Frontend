@@ -26,7 +26,7 @@ const Carousel: React.FC<CarouselProps> = ({ images, interval = 3000 }) => {
     }, [images.length, interval]);
 
     return (
-        <div className="flex flex-col items-center space-y-5">
+        <div className="flex flex-col items-center space-y-3 h-full w-full justify-center">
             <div className="w-72 h-72 relative">
                 <Image
                     src={images[current].src}
@@ -44,9 +44,9 @@ const Carousel: React.FC<CarouselProps> = ({ images, interval = 3000 }) => {
                 ))}
             </div>
 
-            <div className="flex flex-col justify-center items-center space-y-2 mt-5">
-                <h1 className="text-3xl font-poppins font-bold">{images[current].title}</h1>
-                <p className="text-sm font-open-sans">{images[current].description}</p>
+            <div className="flex flex-col justify-start items-center space-y-2 mt-5 h-28 w-[85%]">
+                <h1 className="text-3xl font-poppins font-bold text-center">{images[current].title}</h1>
+                <p className="text-sm font-open-sans text-center">{images[current].description}</p>
             </div>
         </div>
     );

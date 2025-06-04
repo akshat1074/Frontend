@@ -66,6 +66,7 @@ type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> &
     asChild?: boolean;
     leftIcon?: React.ReactNode;
     rightIcon?: React.ReactNode;
+    onClick?: () => void;
   };
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
@@ -80,6 +81,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       asChild = false,
       leftIcon,
       rightIcon,
+      onClick,
       children,
       ...props
     },
@@ -95,6 +97,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         ref={ref}
         disabled={state === 'disabled' || props.disabled}
         {...props}
+        onClick={onClick}
       >
         {leftIcon && <span className="mr-2 flex items-center">{leftIcon}</span>}
         {children}
