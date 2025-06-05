@@ -1,18 +1,9 @@
 import { cn } from "@/lib/utils";
-import React from "react";
 
-export const Container = ({
-    children,
-    className,
-}: {
-    children: React.ReactNode;
-    className?: string;
-}) => {
+export const Container = ({ children, className }: { children: React.ReactNode, className?: string }) => {
     return (
-        <div className="w-full bg-secondary">
-            <div className={cn("flex max-w-[90rem] mx-auto bg-inherit min-h-screen tracking-wide p-10 justify-center items-center", className)}>
+        <div className={cn("max-w-7xl mx-auto flex flex-col pt-28 space-y-10", className)}>
                 {children}
-            </div>
         </div>
     )
 }

@@ -1,111 +1,59 @@
-import * as React from 'react';
-import { Slot } from '@radix-ui/react-slot';
-import { cva, type VariantProps } from 'class-variance-authority';
-import { cn } from '@/lib/utils';
+import * as React from "react"
+import { Slot } from "@radix-ui/react-slot"
+import { cva, type VariantProps } from "class-variance-authority"
+
+import { cn } from "@/lib/utils"
 
 const buttonVariants = cva(
-  'inline-flex cursor-pointer transition-all duration-200 items-center justify-center font-heading font-semibold focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none',
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive",
   {
     variants: {
-      color: {
-        primary: 'bg-[var(--color-primary)] text-[var(--color-bright)] hover:bg-[var(--color-type-high)] active:bg-[var(--color-primary-tint)]',
-        secondary: 'bg-[var(--color-secondary)] text-[var(--color-gray1)] hover:bg-[var(--color-grey)] active:bg-[var(--color-primary-tint)]',
+      variant: {
+        default:
+          "bg-primary text-primary-foreground shadow-xs hover:bg-primary/90",
+        destructive:
+          "bg-destructive text-white shadow-xs hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60",
+        outline:
+          "border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50",
+        secondary:
+          "bg-secondary text-secondary-foreground shadow-xs hover:bg-secondary/80",
+        ghost:
+          "hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50",
+        link: "text-primary underline-offset-4 hover:underline",
       },
       size: {
-        xs: 'text-[14px] leading-[19.6px] px-[70px] py-[14px] rounded-md',
-        sm: 'text-[16px] leading-[22.4px] px-[80px] py-[16px] rounded-md',
-        md: 'text-[18px] leading-[25.2px] px-[90px] py-[18px] rounded-md',
-        lg: 'text-[20px] leading-[28px] px-[100px] py-[20px] rounded-md',
-      },
-      variant: {
-        normal: 'hover:bg-[var(--color-info)]',
-        outline: 'bg-transparent border-2 border-[var(--color-primary)] text-[var(--color-primary)] hover:bg-[var(--color-primary-tint)] hover:text-[var(--color-bright)]',
-        icon: 'p-0 w-[48px] h-[48px] rounded-full justify-center',
-        iconText: 'gap-2',
-      },
-      fullWidth: {
-        true: 'w-full',
-        false: '',
-      },
-      state: {
-        default: '',
-        hover: '',
-        active: '',
-        disabled: 'bg-[var(--color-grey)] text-[var(--color-light-text)] border-none',
+        default: "h-9 px-4 py-2 has-[>svg]:px-3",
+        sm: "h-8 rounded-md gap-1.5 px-3 has-[>svg]:px-2.5",
+        lg: "h-10 rounded-md px-6 has-[>svg]:px-4",
+        icon: "size-9",
       },
     },
-    compoundVariants: [
-      {
-        variant: 'outline',
-        state: 'disabled',
-        class: 'bg-[var(--color-grey)] text-[var(--color-light-text)] border-none',
-      },
-      {
-        variant: 'icon',
-        color: 'primary',
-        class: 'bg-[var(--color-primary)] text-[var(--color-bright)]',
-      },
-      {
-        variant: 'icon',
-        color: 'secondary',
-        class: 'bg-[var(--color-secondary)] text-[var(--color-gray1)]',
-      },
-    ],
     defaultVariants: {
-      color: 'primary',
-      size: 'md',
-      variant: 'normal',
-      fullWidth: false,
-      state: 'default',
+      variant: "default",
+      size: "default",
     },
   }
-);
+)
 
-type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> &
+function Button({
+  className,
+  variant,
+  size,
+  asChild = false,
+  ...props
+}: React.ComponentProps<"button"> &
   VariantProps<typeof buttonVariants> & {
-    asChild?: boolean;
-    leftIcon?: React.ReactNode;
-    rightIcon?: React.ReactNode;
-    onClick?: () => void;
-  };
+    asChild?: boolean
+  }) {
+  const Comp = asChild ? Slot : "button"
 
-const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  (
-    {
-      className,
-      color,
-      size,
-      variant,
-      fullWidth,
-      state,
-      asChild = false,
-      leftIcon,
-      rightIcon,
-      onClick,
-      children,
-      ...props
-    },
-    ref
-  ) => {
-    const Comp = asChild ? Slot : 'button';
-    return (
-      <Comp
-        className={cn(
-          buttonVariants({ color, size, variant, fullWidth, state }),
-          className
-        )}
-        ref={ref}
-        disabled={state === 'disabled' || props.disabled}
-        {...props}
-        onClick={onClick}
-      >
-        {leftIcon && <span className="mr-2 flex items-center">{leftIcon}</span>}
-        {children}
-        {rightIcon && <span className="ml-2 flex items-center">{rightIcon}</span>}
-      </Comp>
-    );
-  }
-);
-Button.displayName = 'Button';
+  return (
+    <Comp
+      data-slot="button"
+      className={cn(buttonVariants({ variant, size, className }))}
+      {...props}
+    />
+  )
+}
 
-export { Button, buttonVariants }; 
+export { Button, buttonVariants }
