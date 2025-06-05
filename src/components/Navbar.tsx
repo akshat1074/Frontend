@@ -8,7 +8,7 @@ import { ThemeToggleButton } from './ui/theme-toggle-button';
 import { Filter, Search } from 'lucide-react';
 
 const NavItems = [
-    { title: 'Home', href: '/' },
+    { title: 'Home', href: '/home' },
     { title: 'Languages', href: '/languages' },
     { title: 'Tutors', href: '/tutors' },
     { title: 'Community', href: '/community' },
@@ -29,19 +29,19 @@ export default function Navbar() {
     });
 
     return (
-        <div className="text-black dark:text-white border">
+        <div className="text-black dark:text-white border text-sm tracking-wider font-poppins font-normal">
             <motion.nav
                 animate={{
                     boxShadow: scrolled ? '0 0 10px 0 rgba(0, 0, 0, 0.1)' : 'none',
-                    width: scrolled ? '84%' : '90vw',
-                    y: scrolled ? 3 : 0,
+                    width: scrolled ? '65%' : '90vw',
+                    y: scrolled ? 5 : 1,
                     borderRadius: scrolled ? '50px' : '15px',
                 }}
                 transition={{
                     duration: 0.3,
                     ease: 'easeInOut',
                 }}
-                className="z-50 fixed inset-x-0 top-2 px-3 pr-5 py-0.5 mx-auto flex items-center justify-between bg-white/5 backdrop-blur-sm"
+                className="z-50 fixed inset-x-0 top-2 px-3 pr-5 py-1 mx-auto flex items-center justify-between bg-white/5 backdrop-blur-sm"
             >
                 <Image
                     src="/logo/ed3hub-dark-1.svg"
@@ -55,7 +55,7 @@ export default function Navbar() {
                         <Link
                             href={item.href}
                             key={idx}
-                            className="text-xs relative px-2 py-1 font-medium uppercase tracking-wide"
+                            className="relative px-2 py-1 capitalize tracking-wide"
                             onMouseEnter={() => setIsHovered(idx)}
                             onMouseLeave={() => setIsHovered(null)}
                         >

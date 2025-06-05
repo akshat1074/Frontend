@@ -3,6 +3,7 @@ import { CheckCircle, CheckSquare, EyeIcon } from "lucide-react"
 import Image from "next/image"
 import { CourseCard } from "@/components/card/CourseCard"
 import Link from "next/link"
+import { Container } from "@/components/ui/container"
 
 interface HomeProps {
   userName: string
@@ -22,7 +23,7 @@ const recommendedCourses = [
 
 export default function Home() {
   return (
-    <div className="flex flex-col mt-28 space-y-10">
+    <Container>
 
       {/* User Welcome Section */}
       <div className="space-y-1 font-poppins">
@@ -38,7 +39,7 @@ export default function Home() {
               <h1 className="text-5xl font-semibold">Your Future Starts Here</h1>
               <p className="text-2xl">Find courses tailored to your skill level and goals.</p>
             </div>
-            <button className="bg-primary-tint font-poppins text-xl border px-6 py-2 rounded-sm border-primary">Get Started</button>
+            <button className="bg-primary-tint font-poppins text-xl border border-white/50 px-6 py-2 rounded-sm">Get Started</button>
           </div>
         </div>
 
@@ -77,6 +78,6 @@ export default function Home() {
         </div>
       </div>
 
-    </div>
+    </Container>
   )
 }

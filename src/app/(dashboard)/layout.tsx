@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar";
 import { ThemeProvider } from "@/components/ui/theme-provider";
 
-const HomeLayout = ({ children }: { children: React.ReactNode }) => {
+const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
     return (
         <ThemeProvider
             attribute="class"
@@ -9,12 +9,10 @@ const HomeLayout = ({ children }: { children: React.ReactNode }) => {
             enableSystem
             disableTransitionOnChange
         >
-            <div className="max-w-[90vw] mx-auto">
                 <Navbar />
                 {children}
-            </div>
         </ThemeProvider>
     );
 };
 
-export default HomeLayout;
+export default DashboardLayout;

@@ -16,7 +16,7 @@ export function CourseCard({
   views
 }: CourseCardProps) {
   return (
-    <div className="h-[640px] w-full rounded-2xl justify-between flex flex-col overflow-hidden shadow-custom">
+    <div className="h-full w-full rounded-2xl justify-between flex flex-col overflow-hidden shadow-md dark:shadow-white/20">
       <Image
         src={imageSrc}
         alt={title}
@@ -30,14 +30,20 @@ export function CourseCard({
           <Image src="/icons/profile-circle.svg" alt="Profile" height="100" width="100" className="size-5 dark:invert-100" />
           <p className="text-base">{instructor}</p>
         </div>
+
+        {status && (
         <div className="flex items-center gap-2">
           <Image src="/icons/check.svg" alt="Profile" height="100" width="100" className="size-5" />
           <p className="text-base">{status}</p>
         </div>
+        )}
+
+        {views && (
         <div className="text-sm flex items-center gap-2">
           <Image src="/icons/eye.svg" alt="Profile" height="100" width="100" className="size-5 dark:invert-100" />
           <p>{views}</p>
         </div>
+        )}
       </div>
     </div>
   )
