@@ -56,7 +56,7 @@ export function ThemeToggleButton({ variant = "circle-blur", start = "top-left",
     }
 
     document.startViewTransition(switchTheme)
-  }, [theme, setTheme])
+  }, [theme, setTheme, variant, start, url, updateStyles])
 
   return (
     <Button

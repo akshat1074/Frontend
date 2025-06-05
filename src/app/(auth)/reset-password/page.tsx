@@ -59,9 +59,9 @@ export default function ResetPassword() {
                     {error && <p className="text-red-500 text-sm">{error}</p>}
 
                     <Button
-                        className="w-full rounded-full mt-10"
-                        variant="normal"
-                        size="xs"
+                        className="w-full rounded-full mt-10 py-5"
+                        variant="default"
+                        size="sm"
                         type="submit"
                     >
                         Reset Password

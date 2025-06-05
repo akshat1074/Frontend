@@ -65,14 +65,14 @@ export default function SignUp() {
               <input type="checkbox" name="remember" id="remember" className="size-4 " />
               <label htmlFor="remember" className="text-sm">
                 I agree to&nbsp;
-                <Link href="/terms-and-condition" className="text-primary">Terms and Conditions</Link>
+                <Link href="/terms-and-condition" className="">Terms and Conditions</Link>
               </label>
             </div>
 
             <Button
-              className="w-full rounded-full mt-1"
-              variant="normal"
-              size="xs"
+              className="w-full rounded-full mt-1 py-5"
+              variant="default"
+              size="sm"
               type="submit"
             >
               Sign Up
@@ -80,9 +80,11 @@ export default function SignUp() {
           </form>
 
           {/* Divider */}
-          <div className="flex flex-col justify-center items-center w-full">
-            <div className="top-3 relative w-4/5 h-[1px] bg-black" />
-            <h1 className="text-sm bg-secondary z-1 px-2">or continue with</h1>
+          <div className="flex space-x-2 justify-center items-center w-full">
+            <div className="bg-black dark:bg-white" />
+            <h1 className="text-sm bg-transparent z-1 px-2">or continue with</h1>
+            <div className="bg-black dark:bg-white/50" />
+
           </div>
 
           {/* OAuth Buttons */}
@@ -94,7 +96,7 @@ export default function SignUp() {
 
           {/* Footer */}
           <div className="flex flex-col space-y-2 justify-center items-center">
-            <p className="text-sm font-open-sans">Already have an account? <Link href="/sign-in" className="text-primary">Sign In</Link></p>
+            <p className="text-sm font-open-sans">Already have an account? <Link href="/sign-in" className="">Sign In</Link></p>
           </div>
         </>
       )}

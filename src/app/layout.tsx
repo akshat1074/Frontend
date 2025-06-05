@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Open_Sans, Poppins } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
 import { ThemeProvider } from "next-themes";
 
 const poppins = Poppins({
@@ -37,7 +36,6 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Navbar />
           {children}
         </ThemeProvider>
       </body>

@@ -1,13 +1,7 @@
-import { Button } from "@/components/ui/button"
-import { CheckCircle, CheckSquare, EyeIcon } from "lucide-react"
 import Image from "next/image"
 import { CourseCard } from "@/components/card/CourseCard"
 import Link from "next/link"
 import { Container } from "@/components/ui/container"
-
-interface HomeProps {
-  userName: string
-}
 
 const ongoingCourses = [
   { imageSrc: "/home/ongoing-courses/1.svg", title: "Intro to Web3 & Blockchain Basics", instructor: "Sandra Jones", status: "Finished", views: "12k" },

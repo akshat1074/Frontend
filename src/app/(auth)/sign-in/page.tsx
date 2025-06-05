@@ -86,16 +86,16 @@ export default function SignIn() {
               </label>
             </div>
             <Button
-              className="w-full rounded-full mt-1"
-              variant="normal"
-              size="xs"
+              className="w-full rounded-full mt-1 py-5"
+              variant="default"
+              size="sm"
               type="submit"
             >
               Sign In
             </Button>
             <Button
               className="w-full rounded-full hover:bg-transparent active:bg-transparent active:border-0 p-0 bg-transparent text-primary"
-              size="xs"
+              size="sm"
               type="button"
               onClick={handleForgotPassword} // Trigger email verification
             >
@@ -105,8 +105,9 @@ export default function SignIn() {
 
           {/* Divider and OAuth */}
           <div className="flex flex-col justify-center items-center w-full">
-            <div className="relative w-4/5 h-[1px] bg-black" />
-            <h1 className="text-sm bg-secondary px-2 relative top-[-10px]">or continue with</h1>
+            <div className="bg-black dark:bg-white" />
+            <h1 className="text-sm bg-transparent px-2 relative top-[-10px]">or continue with</h1>
+            <div className="bg-black dark:bg-white" />
           </div>
           <div className="flex space-x-3">
             <Image src="/logo/google.svg" alt="google" width={50} height={50} />
