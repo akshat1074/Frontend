@@ -8,6 +8,7 @@ import EmailVerification from "@/components/EmailVerification";
 import React from "react";
 import { useRouter } from "next/navigation";
 
+
 export default function SignIn() {
   const router = useRouter();
   const [showVerification, setShowVerification] = React.useState(false);
@@ -71,8 +72,10 @@ export default function SignIn() {
               labelClassName="text-sm"
               togglePassword
             />
-            <div className="flex items-center space-x-2 py-2">
-              <input
+            
+
+            <div className="fle x items-center space-x-2 py-2">
+              <Input
                 type="checkbox"
                 name="remember"
                 id="remember"
