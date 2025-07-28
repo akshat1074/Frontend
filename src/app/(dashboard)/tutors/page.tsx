@@ -1,5 +1,7 @@
 import { TutorCard } from "@/components/card/TutorCard"
+import Navbar from "@/components/Navbar"
 import { Container } from "@/components/ui/container"
+import { redirect } from "next/navigation"
 
 const tutorsDetails = [
     { imageSrc: "/home/tutors/1.svg", name: "Sandra Jones", role: "Tutor", socialLinks: { whatsapp: "/icons/whatsapp.svg", facebook: "/icons/facebook.svg", twitter: "/icons/twitter.svg" } },
@@ -10,10 +12,14 @@ const tutorsDetails = [
     { imageSrc: "/home/tutors/6.svg", name: "John Doe", role: "Tutor", socialLinks: { whatsapp: "/icons/whatsapp.svg", facebook: "/icons/facebook.svg", twitter: "/icons/twitter.svg" } },
 ]
 
+
+
 export default function Tutors() {
+   
+  
     return (
         <Container>
-
+             <Navbar/>
             {/* User Welcome Section */}
             <div className="space-y-1 font-poppins">
                 <h1 className="text-2xl font-semibold">Find your Web3 Tutor</h1>
@@ -23,7 +29,7 @@ export default function Tutors() {
             {/* Tutors Section */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                 {tutorsDetails.map((tutor, index) => (
-                    <TutorCard key={index} {...tutor} />
+                    <TutorCard key={index} {...tutor}  />
                 ))}
             </div>
 
