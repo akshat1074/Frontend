@@ -1,6 +1,7 @@
 import React from 'react';
 import { Mail, MessageCircle, BookOpen } from 'lucide-react';
 import Navbar from '@/components/Navbar';
+import Link from 'next/link';
 
 export default function TomHanielProfile() {
   return (
@@ -67,8 +68,10 @@ export default function TomHanielProfile() {
       {/* Action Buttons */}
       <div className="flex space-x-4 mb-8">
         <button className="flex items-center px-4 py-2 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
+          <Link href="/tutors/TomHaniel/chat">
           <MessageCircle className="w-4 h-4 mr-2" />
           Chat with
+          </Link>
         </button>
         
         <button className="flex items-center px-4 py-2 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">

@@ -38,10 +38,10 @@ export default function Navbar() {
               <span className="text-xl font-bold text-gray-900">d3hub</span>
             </div>
             <nav className="hidden md:flex space-x-6 mr-64">
-              <a href="#" className="text-blue-600 font-medium">Home</a>
+              <a href="/home" className="text-blue-600 font-medium">Home</a>
               <a href="#" className="text-gray-600 hover:text-gray-900">Languages</a>
-              <a href="#" className="text-gray-600 hover:text-gray-900">Tutors</a>
-              <a href="#" className="text-gray-600 hover:text-gray-900">Community</a>
+              <a href="/tutors" className="text-gray-600 hover:text-gray-900">Tutors</a>
+              <a href="/community" className="text-gray-600 hover:text-gray-900">Community</a>
               <a href="#" className="text-gray-600 hover:text-gray-900">Chat with tutor</a>
               
             <Search className="w-5 h-5 text-gray-600 "/>

@@ -92,7 +92,7 @@ export default function Home() {
         <div className="text-2xl font-bold text-gray-800">ED3HUB</div>
       </div>
       <div className="hidden md:flex items-center space-x-8">
-        <a href="#" className="text-gray-600 hover:text-blue-600 transition-colors">Home</a>
+        <a href="/home" className="text-gray-600 hover:text-blue-600 transition-colors">Home</a>
         <a href="#" className="text-gray-600 hover:text-blue-600 transition-colors">About</a>
         <a href="#" className="text-gray-600 hover:text-blue-600 transition-colors">Courses</a>
         <a href="#" className="text-gray-600 hover:text-blue-600 transition-colors">Contact</a>

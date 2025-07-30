@@ -3,6 +3,7 @@ import { Star, MapPin } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
 import { Badge } from '@/components/ui/badge';
+import Link from 'next/link';
 
 interface TutorCardProps {
   name: string;
@@ -27,8 +28,10 @@ const TutorCard: React.FC<TutorCardProps> = ({
 
 
   return (
+    <a href="/tutors/TomHaniel" className='block'>  
     <Card className="group hover:shadow-md transition-all duration-200 cursor-pointer border-border/50">
       <CardContent className="p-6">
+     
         <div className="flex flex-col items-center text-center space-y-4">
           <Avatar className="h-20 w-20">
             <AvatarImage src={image} alt={name} />
@@ -71,8 +74,11 @@ const TutorCard: React.FC<TutorCardProps> = ({
             </div>
           )}
         </div>
+        
       </CardContent>
     </Card>
+    </a>
+    
   );
 };
 

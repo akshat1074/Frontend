@@ -9,7 +9,7 @@ const tutorsDetails = [
     { imageSrc: "/home/tutors/3.svg", name: "Scott Daniel", role: "Tutor", socialLinks: { whatsapp: "/icons/whatsapp.svg", facebook: "/icons/facebook.svg", twitter: "/icons/twitter.svg" } },
     { imageSrc: "/home/tutors/4.svg", name: "John Doe", role: "Tutor", socialLinks: { whatsapp: "/icons/whatsapp.svg", facebook: "/icons/facebook.svg", twitter: "/icons/twitter.svg" } },
     { imageSrc: "/home/tutors/5.svg", name: "John Doe", role: "Tutor", socialLinks: { whatsapp: "/icons/whatsapp.svg", facebook: "/icons/facebook.svg", twitter: "/icons/twitter.svg" } },
-    { imageSrc: "/home/tutors/6.svg", name: "John Doe", role: "Tutor", socialLinks: { whatsapp: "/icons/whatsapp.svg", facebook: "/icons/facebook.svg", twitter: "/icons/twitter.svg" } },
+    { imageSrc: "/home/tutors/6.svg", name: "TomHaniel", role: "Tutor", socialLinks: { whatsapp: "/icons/whatsapp.svg", facebook: "/icons/facebook.svg", twitter: "/icons/twitter.svg" } },
 ]
 
 
@@ -18,8 +18,9 @@ export default function Tutors() {
    
   
     return (
+        <div>
+            <Navbar/>
         <Container>
-             <Navbar/>
             {/* User Welcome Section */}
             <div className="space-y-1 font-poppins">
                 <h1 className="text-2xl font-semibold">Find your Web3 Tutor</h1>
@@ -34,5 +35,6 @@ export default function Tutors() {
             </div>
 
         </Container>
+        </div>
     )
 }
