@@ -8,8 +8,8 @@ const tutorsDetails = [
     { imageSrc: "/home/tutors/2.svg", name: "Tori Simone", role: "Tutor", socialLinks: { whatsapp: "/icons/whatsapp.svg", facebook: "/icons/facebook.svg", twitter: "/icons/twitter.svg" } },
     { imageSrc: "/home/tutors/3.svg", name: "Scott Daniel", role: "Tutor", socialLinks: { whatsapp: "/icons/whatsapp.svg", facebook: "/icons/facebook.svg", twitter: "/icons/twitter.svg" } },
     { imageSrc: "/home/tutors/4.svg", name: "John Doe", role: "Tutor", socialLinks: { whatsapp: "/icons/whatsapp.svg", facebook: "/icons/facebook.svg", twitter: "/icons/twitter.svg" } },
-    { imageSrc: "/home/tutors/5.svg", name: "John Doe", role: "Tutor", socialLinks: { whatsapp: "/icons/whatsapp.svg", facebook: "/icons/facebook.svg", twitter: "/icons/twitter.svg" } },
-    { imageSrc: "/home/tutors/6.svg", name: "TomHaniel", role: "Tutor", socialLinks: { whatsapp: "/icons/whatsapp.svg", facebook: "/icons/facebook.svg", twitter: "/icons/twitter.svg" } },
+    { imageSrc: "/home/tutors/5.svg", name: "Barak Jethro", role: "Tutor", socialLinks: { whatsapp: "/icons/whatsapp.svg", facebook: "/icons/facebook.svg", twitter: "/icons/twitter.svg" } },
+    { imageSrc: "/home/tutors/6.svg", name: "Tom Haniel", role: "Tutor", socialLinks: { whatsapp: "/icons/whatsapp.svg", facebook: "/icons/facebook.svg", twitter: "/icons/twitter.svg" } },
 ]
 
 

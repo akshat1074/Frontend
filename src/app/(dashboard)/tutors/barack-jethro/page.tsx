@@ -19,7 +19,7 @@ export default function TomHanielProfile() {
           {/* Profile Info */}
           <div className="flex-1">
             <div className="flex justify-between items-start mb-2">
-              <h1 className="text-2xl font-bold text-gray-900">Tom Haniel</h1>
+              <h1 className="text-2xl font-bold text-gray-900">Barack Jethro</h1>
               <div className="flex items-center space-x-4">
                 <a 
                   href="mailto:hanieltom@gmail.com" 

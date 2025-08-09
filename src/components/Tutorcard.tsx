@@ -25,59 +25,45 @@ const TutorCard: React.FC<TutorCardProps> = ({
   hourlyRate
 }) => {
   
+  const nameSlug = name.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
 
 
   return (
-    <a href="/tutors/TomHaniel" className='block'>  
-    <Card className="group hover:shadow-md transition-all duration-200 cursor-pointer border-border/50">
-      <CardContent className="p-6">
-     
-        <div className="flex flex-col items-center text-center space-y-4">
-          <Avatar className="h-20 w-20">
-            <AvatarImage src={image} alt={name} />
-            <AvatarFallback>{name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
-          </Avatar>
-          
-          <div className="space-y-2">
-            <h3 className="font-semibold text-lg text-foreground">{name}</h3>
-            <Badge variant="secondary" className="text-xs px-2 py-1">
-              {specialization}
-            </Badge>
+    <Link href={`/tutors/${nameSlug}`} className="block">
+      <Card className="group hover:shadow-md transition-all duration-200 cursor-pointer border-border">
+        <CardContent className="p-6">
+          <div className="flex flex-col items-center text-center space-y-4">
+            <Avatar className="h-20 w-20">
+              <AvatarImage src={image} alt={name} />
+              <AvatarFallback>
+                {name.split(' ').map(n => n[0]).join('')}
+              </AvatarFallback>
+            </Avatar>
+            
+            <div className="space-y-2">
+              <h3 className="font-semibold text-lg text-foreground">{name}</h3>
+              <Badge variant="secondary" className="text-xs px-2 py-1">
+                {specialization}
+              </Badge>
+              
+              <div className="flex items-center justify-center space-x-2 text-sm text-muted-foreground">
+                <span>⭐ {rating}</span>
+                <span>•</span>
+                <span>{reviews} reviews</span>
+              </div>
+              
+              <div className="text-sm text-muted-foreground">
+                📍 {location}
+              </div>
+              
+              <div className="text-lg font-semibold text-foreground">
+                ${hourlyRate}/hr
+              </div>
+            </div>
           </div>
-
-          <div className="flex items-center space-x-1">
-            <div className="flex items-center space-x-1">
-              {[...Array(5)].map((_, i) => (
-                <Star
-                  key={i}
-                  className={`h-4 w-4 ${
-                    i < Math.floor(rating)
-                      ? 'fill-yellow-400 text-yellow-400'
-                      : 'text-muted-foreground'
-                  }`}
-                />
-              ))}
-            </div>
-            <span className="text-sm text-muted-foreground">({reviews})</span>
-          </div>
-
-          {location && (
-            <div className="flex items-center space-x-1 text-sm text-muted-foreground">
-              <MapPin className="h-4 w-4" />
-              <span>{location}</span>
-            </div>
-          )}
-
-          {hourlyRate && (
-            <div className="text-sm font-medium text-foreground">
-              ${hourlyRate}/hour
-            </div>
-          )}
-        </div>
-        
-      </CardContent>
-    </Card>
-    </a>
+        </CardContent>
+      </Card>
+    </Link>
     
   );
 };

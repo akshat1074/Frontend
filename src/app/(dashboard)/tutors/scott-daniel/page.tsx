@@ -1,8 +1,12 @@
 import React from 'react';
 import { Mail, MessageCircle, BookOpen } from 'lucide-react';
+import Navbar from '@/components/Navbar';
+import Link from 'next/link';
 
 export default function TomHanielProfile() {
   return (
+    <div>
+      <Navbar/>
     <div className="max-w-4xl mx-auto p-6 bg-white">
       {/* Main Profile Card */}
       <div className="bg-gray-50 rounded-lg p-6 mb-6">
@@ -10,7 +14,7 @@ export default function TomHanielProfile() {
           {/* Profile Image */}
           <div className="flex-shrink-0">
             <img
-              src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=120&h=120&fit=crop&crop=face"
+              src="/home/tutors/6.svg"
               alt="Tom Haniel"
               className="w-24 h-24 rounded-full object-cover"
             />
@@ -64,8 +68,10 @@ export default function TomHanielProfile() {
       {/* Action Buttons */}
       <div className="flex space-x-4 mb-8">
         <button className="flex items-center px-4 py-2 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
+          <Link href="/tutors/tom-haniel/chat">
           <MessageCircle className="w-4 h-4 mr-2" />
           Chat with
+          </Link>
         </button>
         
         <button className="flex items-center px-4 py-2 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
@@ -73,6 +79,7 @@ export default function TomHanielProfile() {
           Other courses by the same tutor
         </button>
       </div>
+    </div>
     </div>
   );
 }

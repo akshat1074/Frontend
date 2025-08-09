@@ -5,45 +5,46 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Users, Calendar, MapPin } from 'lucide-react';
 import Navbar from '@/components/Navbar';
+import Image from 'next/image';
 
 const Community = () => {
   const communityMembers = [
     {
       name: "ChainCircle",
       members: "2.5k members",
-      image: "/placeholder.svg"
+      image: "/community/1.jpg"
     },
     {
       name: "Proof of Learn",
       members: "1.8k members", 
-      image: "/placeholder.svg"
+      image: "/community/2.jpg"
     },
     {
       name: "ChainCircle",
       members: "3.2k members",
-      image: "/placeholder.svg"
+      image: "/community/3.jpg"
     }
   ];
 
   const popularTopics = [
     {
       title: "Study Group",
-      image: "/recommended-courses/1.svg",
+      image: "/community/1.jpg",
       category: "Learning"
     },
     {
       title: "The dAppl Lounge",
-      image: "/placeholder.svg", 
+      image: "/community/4.jpg", 
       category: "Discussion"
     },
     {
       title: "Building the Startups",
-      image: "/placeholder.svg",
+      image: "/community/2.jpg",
       category: "Entrepreneurship"
     },
     {
       title: "Token Learning",
-      image: "/placeholder.svg",
+      image: "/community/3.jpg",
       category: "Education"
     }
   ];
@@ -116,7 +117,7 @@ const Community = () => {
           {popularTopics.map((topic, index) => (
             <Card key={index} className="group hover:shadow-md transition-all overflow-hidden">
               <div className="aspect-video bg-gradient-to-br from-primary/20 to-primary/5 relative">
-                <div className="absolute inset-0 bg-black/20"></div>
+                <Image src ={topic.image} alt='img' width={550} height={250} />
                 <div className="absolute bottom-4 left-4 right-4">
                   <h3 className="text-white font-semibold mb-2">{topic.title}</h3>
                   <Button size="sm" className="w-full">Join</Button>
@@ -136,7 +137,7 @@ const Community = () => {
         
         <Card className="overflow-hidden">
           <div className="aspect-[2/1] bg-gradient-to-br from-muted to-muted/50 relative">
-            <div className="absolute inset-0 bg-black/10"></div>
+            <Image src={"/community/5.jpg"} alt='img' height={1240} width={1650}/>
           </div>
           <CardContent className="p-6">
             <h3 className="text-2xl font-bold text-foreground mb-4">

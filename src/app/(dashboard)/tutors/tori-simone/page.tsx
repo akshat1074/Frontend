@@ -23,7 +23,7 @@ export default function TomHanielProfile() {
           {/* Profile Info */}
           <div className="flex-1">
             <div className="flex justify-between items-start mb-2">
-              <h1 className="text-2xl font-bold text-gray-900">Tom Haniel</h1>
+              <h1 className="text-2xl font-bold text-gray-900">Tori Simone</h1>
               <div className="flex items-center space-x-4">
                 <a 
                   href="mailto:hanieltom@gmail.com" 
@@ -68,7 +68,7 @@ export default function TomHanielProfile() {
       {/* Action Buttons */}
       <div className="flex space-x-4 mb-8">
         <button className="flex items-center px-4 py-2 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
-          <Link href="/tutors/TomHaniel/chat">
+          <Link href="/tutors/tori-simone/chat">
           <MessageCircle className="w-4 h-4 mr-2" />
           Chat with
           </Link>
