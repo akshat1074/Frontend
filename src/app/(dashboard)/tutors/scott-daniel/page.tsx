@@ -68,7 +68,7 @@ export default function TomHanielProfile() {
       {/* Action Buttons */}
       <div className="flex space-x-4 mb-8">
         <button className="flex items-center px-4 py-2 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
-          <Link href="/tutors/tom-haniel/chat">
+          <Link href="/tutors/scott-daniel/chat">
           <MessageCircle className="w-4 h-4 mr-2" />
           Chat with
           </Link>
