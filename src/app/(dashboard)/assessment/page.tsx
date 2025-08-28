@@ -8,9 +8,12 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ProgressBar } from "@/components/ProgressBar";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import Link from "next/link";
+import { useRouter } from 'next/router'
+
 
 const Assessment = () => {
-  const navigate = useNavigate();
+  const router = useRouter()
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState<{ [key: number]: string }>({});
   const [showResults, setShowResults] = useState(false);
@@ -111,7 +114,7 @@ const Assessment = () => {
           rating={4.7}
           ratingCount={234}
           downloadSize="393 MB"
-          onBack={() => navigate("/course")}
+         
         />
         
         <div className="p-6 max-w-4xl mx-auto">
@@ -128,8 +131,10 @@ const Assessment = () => {
               </p>
               
               <div className="flex gap-4 justify-center">
-                <Button onClick={() => navigate("/course")}>
+                <Button >
+                  <Link href="courses">
                   Back to Course
+                  </Link>
                 </Button>
                 <Button variant="outline" onClick={() => {
                   setCurrentQuestion(0);
@@ -153,7 +158,7 @@ const Assessment = () => {
         rating={4.7}
         ratingCount={234}
         downloadSize="393 MB"
-        onBack={() => navigate("/course")}
+    
       />
 
       <div className="p-6">

@@ -1,17 +1,20 @@
 "use client"
 
 import { useState } from "react";
-import { useSearchParams, useNavigate } from "react-router-dom";
+
+import { useSearchParams } from 'next/navigation'
+
 import { CourseHeader } from "@/components/CourseHeader";
 import { VideoPlayer } from "@/components/VideoPlayer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import cryptoChart from "@/assets/crypto-chart.jpg";
+import Link from "next/link";
 
 const Lesson = () => {
-  const [searchParams] = useSearchParams();
-  const navigate = useNavigate();
+  const searchParams = useSearchParams();
+  
   const module = searchParams.get("module") || "Introduction to Tokenomics";
   
   const [activeSection, setActiveSection] = useState("overview");
@@ -60,7 +63,7 @@ Each mechanism serves different purposes and targets different participant group
         rating={4.7}
         ratingCount={234}
         downloadSize="393 MB"
-        onBack={() => navigate("/course")}
+        
       />
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 p-6">
@@ -129,13 +132,17 @@ Each mechanism serves different purposes and targets different participant group
       {/* Navigation Footer */}
       <div className="sticky bottom-0 bg-background border-t p-4">
         <div className="max-w-6xl mx-auto flex justify-between">
-          <Button variant="outline" onClick={() => navigate("/course")}>
+          <Button variant="outline" >
+            <Link href="/course">
             <ChevronLeft className="w-4 h-4 mr-2" />
             Previous
+            </Link>
           </Button>
-          <Button onClick={() => navigate("/assessment")}>
+          <Button >
+            <Link href="/assessment">
             Next
             <ChevronRight className="w-4 h-4 ml-2" />
+            </Link>
           </Button>
         </div>
       </div>
