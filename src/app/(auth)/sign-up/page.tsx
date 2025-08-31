@@ -1,6 +1,7 @@
 "use client";
 
 import EmailVerification from "@/components/EmailVerification";
+import RoleRadio from "@/components/RoleRadio";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import Image from "next/image";
@@ -60,7 +61,8 @@ export default function SignUp() {
             <Input type="email" placeholder="Email" label="Email" labelClassName="text-sm" />
             <Input type="password" placeholder="Password" label="Password" labelClassName="text-sm" togglePassword />
             <Input type="password" placeholder="Confirm Password" label="Confirm Password" labelClassName="text-sm" togglePassword />
-
+            
+             <RoleRadio/>
             <div className="flex items-center space-x-2 py-2">
               <input type="checkbox" name="remember" id="remember" className="size-4 " />
               <label htmlFor="remember" className="text-sm">
