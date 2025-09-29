@@ -106,7 +106,7 @@ export default function Home() {
         {/* Welcome Section */}
         <div  className="mb-8">
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
-            Welcome, <span className="text-blue-600">Jonas May</span> 👋
+            Welcome, <span className="text-blue-600">{email}</span> 👋
           </h1>
           <p className="text-gray-600">Start your journey into blockchain, NFTs, DAOs, and more.</p>
         </div>
