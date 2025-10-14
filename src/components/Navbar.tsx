@@ -5,13 +5,6 @@ import {  useMotionValueEvent, useScroll } from 'motion/react';
 import { useState } from 'react';
 import { Filter, Search } from 'lucide-react';
 
-const NavItems = [
-    { title: 'Home', href: '/home' },
-    { title: 'Languages', href: '/languages' },
-    { title: 'Tutors', href: '/tutors' },
-    { title: 'Community', href: '/community' },
-    { title: 'Chat with tutor', href: '/chat-with-tutor' },
-];
 
 export default function Navbar() {
   

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Play, Pause, Volume2, Maximize, Settings } from "lucide-react";
 import { Button } from "./ui/button";
+import Image from "next/image";
 
 interface VideoPlayerProps {
   src?: string;
@@ -24,7 +25,7 @@ export const VideoPlayer = ({ poster, title }: VideoPlayerProps) => {
       {/* Video container with poster or gradient background */}
       <div className="aspect-video relative">
         {poster ? (
-          <img 
+          <Image
             src={poster} 
             alt="Video thumbnail" 
             className="w-full h-full object-cover"

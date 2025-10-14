@@ -2,6 +2,7 @@ import React from 'react';
 import { Mail, MessageCircle, BookOpen } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function TomHanielProfile() {
   return (
@@ -13,7 +14,7 @@ export default function TomHanielProfile() {
         <div className="flex items-start space-x-6">
           {/* Profile Image */}
           <div className="flex-shrink-0">
-            <img
+            <Image
               src="/home/tutors/6.svg"
               alt="Tom Haniel"
               className="w-24 h-24 rounded-full object-cover"
