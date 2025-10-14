@@ -8,10 +8,10 @@ interface VideoPlayerProps {
   title?: string;
 }
 
-export const VideoPlayer = ({ src, poster, title }: VideoPlayerProps) => {
+export const VideoPlayer = ({ poster, title }: VideoPlayerProps) => {
   const [isPlaying, setIsPlaying] = useState(false);
-  const [currentTime, setCurrentTime] = useState(0);
-  const [duration, setDuration] = useState(0);
+  const [currentTime] = useState(0);
+  const [duration] = useState(0);
 
   const formatTime = (time: number) => {
     const minutes = Math.floor(time / 60);

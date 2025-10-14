@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 import { ArrowLeft, Send, Phone, Video } from 'lucide-react';
-import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';

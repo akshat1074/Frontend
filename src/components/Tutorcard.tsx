@@ -1,5 +1,4 @@
 import React from 'react';
-import { Star, MapPin } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
 import { Badge } from '@/components/ui/badge';

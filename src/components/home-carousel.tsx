@@ -1,6 +1,4 @@
 "use client";
-
-import { title } from "process";
 import Carousel from "./ui/carousel";
 
 export function HomeCarousel(){

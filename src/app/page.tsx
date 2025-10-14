@@ -1,6 +1,6 @@
  "use client"
 import { motion } from "motion/react";
-import { ArrowRight, BookOpen, Coins, TrendingUp, Award, Users, Zap, Star } from "lucide-react";
+import { ArrowRight, BookOpen, Coins, TrendingUp, Award, Zap, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { GeometricBlob, Web3Network, BlockchainIllustration, CryptoCoin, AbstractPattern } from "@/components/VectorArt";

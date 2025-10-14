@@ -8,7 +8,7 @@ export default function TomHanielProfile() {
     <div>
       <Navbar/>
     <div className="max-w-4xl mx-auto p-6 bg-white">
-      {/* Main Profile Card */}
+      {/* Main Profi+le Card */}
       <div className="bg-gray-50 rounded-lg p-6 mb-6">
         <div className="flex items-start space-x-6">
           {/* Profile Image */}

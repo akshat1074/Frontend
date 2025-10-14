@@ -1,10 +1,8 @@
 'use client';
 
-import { motion, useMotionValueEvent, useScroll } from 'motion/react';
-import Image from 'next/image';
-import Link from 'next/link';
+import {  useMotionValueEvent, useScroll } from 'motion/react';
+
 import { useState } from 'react';
-import { ThemeToggleButton } from './ui/theme-toggle-button';
 import { Filter, Search } from 'lucide-react';
 
 const NavItems = [
@@ -16,7 +14,7 @@ const NavItems = [
 ];
 
 export default function Navbar() {
-    const [isHovered, setIsHovered] = useState<number | null>(null);
+  
     const { scrollY } = useScroll();
     const [scrolled, setScrolled] = useState<boolean>(false);
 
