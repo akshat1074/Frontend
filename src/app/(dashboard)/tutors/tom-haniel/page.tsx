@@ -15,6 +15,8 @@ export default function TomHanielProfile() {
           {/* Profile Image */}
           <div className="flex-shrink-0">
             <Image
+              width={24}
+              height={24}
               src="/home/tutors/6.svg"
               alt="Tom Haniel"
               className="w-24 h-24 rounded-full object-cover"
