@@ -2,18 +2,21 @@ import React from 'react';
 import { Mail, MessageCircle, BookOpen } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function TomHanielProfile() {
   return (
     <div>
       <Navbar/>
     <div className="max-w-4xl mx-auto p-6 bg-white">
-      {/* Main Profile Card */}
+      {/* Main Profi+le Card */}
       <div className="bg-gray-50 rounded-lg p-6 mb-6">
         <div className="flex items-start space-x-6">
           {/* Profile Image */}
           <div className="flex-shrink-0">
-            <img
+            <Image
+              width={24}
+              height={24}
               src="/home/tutors/6.svg"
               alt="Tom Haniel"
               className="w-24 h-24 rounded-full object-cover"

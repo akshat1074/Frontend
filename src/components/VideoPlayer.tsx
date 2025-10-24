@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Play, Pause, Volume2, Maximize, Settings } from "lucide-react";
 import { Button } from "./ui/button";
+import Image from "next/image";
 
 interface VideoPlayerProps {
   src?: string;
@@ -8,10 +9,10 @@ interface VideoPlayerProps {
   title?: string;
 }
 
-export const VideoPlayer = ({ src, poster, title }: VideoPlayerProps) => {
+export const VideoPlayer = ({ poster, title }: VideoPlayerProps) => {
   const [isPlaying, setIsPlaying] = useState(false);
-  const [currentTime, setCurrentTime] = useState(0);
-  const [duration, setDuration] = useState(0);
+  const [currentTime] = useState(0);
+  const [duration] = useState(0);
 
   const formatTime = (time: number) => {
     const minutes = Math.floor(time / 60);
@@ -24,7 +25,7 @@ export const VideoPlayer = ({ src, poster, title }: VideoPlayerProps) => {
       {/* Video container with poster or gradient background */}
       <div className="aspect-video relative">
         {poster ? (
-          <img 
+          <Image
             src={poster} 
             alt="Video thumbnail" 
             className="w-full h-full object-cover"

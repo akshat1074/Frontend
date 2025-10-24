@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+
 import { CourseHeader } from "@/components/CourseHeader";
 import { QuizQuestion } from "@/components/QuizQuestion";
 import { Button } from "@/components/ui/button";
@@ -9,11 +9,10 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ProgressBar } from "@/components/ProgressBar";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Link from "next/link";
-import { useRouter } from 'next/navigation'
 
 
 const Assessment = () => {
-  const router = useRouter()
+ 
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState<{ [key: number]: string }>({});
   const [showResults, setShowResults] = useState(false);

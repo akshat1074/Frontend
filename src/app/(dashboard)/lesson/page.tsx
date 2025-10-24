@@ -1,6 +1,5 @@
 "use client"
 
-import { useState } from "react";
 
 import { useSearchParams } from 'next/navigation'
 
@@ -9,7 +8,6 @@ import { VideoPlayer } from "@/components/VideoPlayer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import cryptoChart from "@/assets/crypto-chart.jpg";
 import Link from "next/link";
 
 const Lesson = () => {
@@ -17,7 +15,6 @@ const Lesson = () => {
   
   const module = searchParams.get("module") || "Introduction to Tokenomics";
   
-  const [activeSection, setActiveSection] = useState("overview");
 
   const lessonContent = {
     "Introduction to Tokenomics": {

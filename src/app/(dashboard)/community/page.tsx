@@ -147,7 +147,7 @@ const Community = () => {
               The Web3 Build-A-dApp Weekend is a high-energy, collaborative hackathon designed to bring together builders, developers, designers, and innovators from across our global community. Over the course of the weekend, teams will work to build their first smart contract as a seasoned dev exploring groundbreaking applications utilizing Web3 technologies.
             </p>
             <p className="text-muted-foreground mb-6 leading-relaxed">
-              This event is not just about coding — it's about creativity, experimentation, and community learning. Whether you're a beginner eager to build your first smart contract or a seasoned developer, this weekend provides a supportive environment for all experience levels. Participants will receive prompts across various themes like DeFi, decentralized identity, and community governance, and all will be encouraged to think outside the box while collaborating in a fast-paced, supportive environment.
+              This event is not just about coding — It{"'"}s about creativity, experimentation, and community learning. Whether you{"'"}re a beginner eager to build your first smart contract or a seasoned developer, this weekend provides a supportive environment for all experience levels. Participants will receive prompts across various themes like DeFi, decentralized identity, and community governance, and all will be encouraged to think outside the box while collaborating in a fast-paced, supportive environment.
             </p>
             
             <div className="flex items-center space-x-6 text-sm text-muted-foreground">

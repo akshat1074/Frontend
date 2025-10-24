@@ -61,7 +61,7 @@ const Index = () => {
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-3xl font-bold">Dashboard</h1>
-          <p className="text-muted-foreground">Welcome back! Here's what's happening with your courses.</p>
+          <p className="text-muted-foreground">Welcome back! Here{"'"}s what{"'"}s happening with your courses.</p>
         </div>
         <Button onClick={() => router.push('/upload-courses')} className="bg-gradient-primary">
           <Plus className="mr-2 h-4 w-4" />

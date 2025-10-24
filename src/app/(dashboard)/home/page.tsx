@@ -1,12 +1,10 @@
-import { motion } from "motion/react"
-import { Trophy, BookOpen, Clock, Award, Users, Target, Star, ChevronRight, Search, Filter } from 'lucide-react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+
+import { Trophy, BookOpen, Clock, Award, Target, Star, ChevronRight } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Progress } from '@/components/ui/progress';
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
-import { redirect } from "next/navigation";
 import Link from "next/link";
 
 
@@ -85,13 +83,7 @@ export default function Home() {
     transition: { duration: 0.6 }
   };
 
-  const staggerContainer = {
-    animate: {
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
-  };
+ 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Header */}
@@ -106,7 +98,7 @@ export default function Home() {
         {/* Welcome Section */}
         <div  className="mb-8">
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
-            Welcome, <span className="text-blue-600">{email}</span> 👋
+            Welcome, <span className="text-blue-600">Johas</span> 👋
           </h1>
           <p className="text-gray-600">Start your journey into blockchain, NFTs, DAOs, and more.</p>
         </div>

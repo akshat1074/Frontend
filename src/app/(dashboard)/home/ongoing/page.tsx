@@ -6,9 +6,9 @@ import Image from 'next/image'
 import React from 'react'
 import Navbar from '@/components/Navbar'
 
-type Props = {}
 
-const page = (props: Props) => {
+
+const page = () => {
   const courses = [
     {
       title: 'Intro to Web3 & Blockchain Basics',

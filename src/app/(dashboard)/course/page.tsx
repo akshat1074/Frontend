@@ -87,7 +87,7 @@ const Course = () => {
             <div className="mb-8">
               <p className="text-foreground leading-relaxed">
                 This course introduces UI/UX designers to the world of Tokenomics and Decentralized Finance (DeFi). 
-                You'll learn how DeFi protocols work, the economic models behind them, and how to design usable, 
+                You{"'"}ll learn how DeFi protocols work, the economic models behind them, and how to design usable, 
                 trustworthy, and engaging interfaces for Web3 users.
               </p>
               <p className="text-foreground leading-relaxed mt-4">

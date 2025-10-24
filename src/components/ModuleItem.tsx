@@ -1,5 +1,5 @@
 import { CheckCircle2, Circle, Play, FileText, ChevronRight } from "lucide-react";
-import { Button } from "./ui/button";
+
 
 interface ModuleItemProps {
   title: string;

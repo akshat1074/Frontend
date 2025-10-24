@@ -1,7 +1,6 @@
 import { TutorCard } from "@/components/card/TutorCard"
 import Navbar from "@/components/Navbar"
 import { Container } from "@/components/ui/container"
-import { redirect } from "next/navigation"
 
 const tutorsDetails = [
     { imageSrc: "/home/tutors/1.svg", name: "Sandra Jones", role: "Tutor", socialLinks: { whatsapp: "/icons/whatsapp.svg", facebook: "/icons/facebook.svg", twitter: "/icons/twitter.svg" } },
