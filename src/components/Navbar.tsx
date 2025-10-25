@@ -1,23 +1,11 @@
 'use client';
 
-import {  useMotionValueEvent, useScroll } from 'motion/react';
-
-import { useState } from 'react';
 import { Filter, Search } from 'lucide-react';
 
 
 export default function Navbar() {
   
-    const { scrollY } = useScroll();
-    const [scrolled, setScrolled] = useState<boolean>(false);
-
-    useMotionValueEvent(scrollY, 'change', (latest) => {
-        if (latest > 20) {
-            setScrolled(true);
-        } else {
-            setScrolled(false);
-        }
-    });
+    
 
     return (
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

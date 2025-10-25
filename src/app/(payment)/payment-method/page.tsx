@@ -47,7 +47,7 @@ const PaymentMethod = () => {
               <CreditCard className="w-7 h-7 text-accent" />
             </div>
             <h1 className="text-3xl font-bold text-foreground mb-2">Choose payment method</h1>
-            <p className="text-muted-foreground">Select how you'd like to complete your purchase</p>
+            <p className="text-muted-foreground">Select how you{"'"}d like to complete your purchase</p>
           </div>
 
           <div className="space-y-4 mb-8">

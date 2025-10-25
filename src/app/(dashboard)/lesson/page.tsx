@@ -13,7 +13,7 @@ import Link from "next/link";
 const Lesson = () => {
   const searchParams = useSearchParams();
   
-  const module = searchParams.get("module") || "Introduction to Tokenomics";
+  const mymodule = searchParams.get("module") || "Introduction to Tokenomics";
   
 
   const lessonContent = {
@@ -51,7 +51,7 @@ Each mechanism serves different purposes and targets different participant group
     }
   };
 
-  const currentLesson = lessonContent[module as keyof typeof lessonContent] || lessonContent["Introduction to Tokenomics"];
+  const currentLesson = lessonContent[mymodule as keyof typeof lessonContent] || lessonContent["Introduction to Tokenomics"];
 
   return (
     <div className="min-h-screen bg-background">
@@ -66,7 +66,7 @@ Each mechanism serves different purposes and targets different participant group
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 p-6">
         {/* Main Content */}
         <div className="lg:col-span-2 space-y-6">
-          <VideoPlayer title={module} poster="cryptoChart"/>
+          <VideoPlayer title={mymodule} poster="cryptoChart"/>
           
           <Card>
             <CardContent className="p-6">

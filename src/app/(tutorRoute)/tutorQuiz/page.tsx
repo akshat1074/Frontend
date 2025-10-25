@@ -251,7 +251,7 @@ export default function QuizAssessment() {
                       />
                       <Checkbox
                         checked={newQuestion.correctAnswer === option}
-                        onCheckedChange={(checked:any) => {
+                        onCheckedChange={(checked:boolean) => {
                           if (checked) {
                             setNewQuestion({ ...newQuestion, correctAnswer: option });
                           }
