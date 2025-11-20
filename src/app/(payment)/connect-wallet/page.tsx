@@ -1,17 +1,18 @@
 "use client"
 
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+
 import { Wallet, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PaymentOption } from "@/components/PaymentOptions";
+import { useRouter } from "next/router";
 
 const ConnectWallet = () => {
-  const navigate = useNavigate();
+  const router = useRouter()
   const [selectedWallet, setSelectedWallet] = useState<string>("walletconnect");
-
+  
   const handleNext = () => {
-    navigate("/payment-details");
+    router.push("/payment-details");
   };
 
   return (
