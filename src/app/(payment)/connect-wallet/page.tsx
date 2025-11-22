@@ -5,7 +5,7 @@ import { useState } from "react";
 import { Wallet, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PaymentOption } from "@/components/PaymentOptions";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
 const ConnectWallet = () => {
   const router = useRouter()
