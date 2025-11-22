@@ -2,7 +2,7 @@
 
 
 import { useSearchParams } from 'next/navigation'
-
+import { Suspense } from 'react';
 import { CourseHeader } from "@/components/CourseHeader";
 import { VideoPlayer } from "@/components/VideoPlayer";
 import { Button } from "@/components/ui/button";
@@ -54,6 +54,7 @@ Each mechanism serves different purposes and targets different participant group
   const currentLesson = lessonContent[mymodule as keyof typeof lessonContent] || lessonContent["Introduction to Tokenomics"];
 
   return (
+    <Suspense>
     <div className="min-h-screen bg-background">
       <CourseHeader
         title="Tokenomics: Designing Crypto Assets"
@@ -144,6 +145,7 @@ Each mechanism serves different purposes and targets different participant group
         </div>
       </div>
     </div>
+    </Suspense>
   );
 };
 
