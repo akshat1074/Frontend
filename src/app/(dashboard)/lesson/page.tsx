@@ -54,7 +54,7 @@ Each mechanism serves different purposes and targets different participant group
   const currentLesson = lessonContent[mymodule as keyof typeof lessonContent] || lessonContent["Introduction to Tokenomics"];
 
   return (
-    <Suspense>
+    
     <div className="min-h-screen bg-background">
       <CourseHeader
         title="Tokenomics: Designing Crypto Assets"
@@ -145,8 +145,17 @@ Each mechanism serves different purposes and targets different participant group
         </div>
       </div>
     </div>
-    </Suspense>
+    
+
+    
   );
 };
 
-export default Lesson;
+export default function LessonPage(){
+  return(
+    <Suspense fallback={<div>Loding . .. ...</div>}>
+      <Lesson/>
+    </Suspense>
+  )
+}
+
