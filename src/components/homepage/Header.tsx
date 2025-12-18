@@ -1,9 +1,12 @@
+"use client"
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, GraduationCap } from "lucide-react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const router = useRouter()
 
   const navLinks = [
     { name: "Features", href: "#features" },
@@ -40,10 +43,10 @@ const Header = () => {
 
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-3">
-            <Button variant="ghost" size="sm">
+            <Button variant="ghost" size="sm" onClick={() =>router.push("/sign-in")}>
               Sign In
             </Button>
-            <Button size="sm">Get Started</Button>
+            <Button size="sm" onClick={() =>router.push("/sign-up")}>Get Started</Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -74,10 +77,12 @@ const Header = () => {
                 </a>
               ))}
               <div className="flex flex-col gap-2 pt-4 border-t border-border">
-                <Button variant="ghost" size="sm">
+                <Button variant="ghost" size="sm" onClick={() =>router.push("/sign-in")}>
                   Sign In
                 </Button>
-                <Button size="sm">Get Started</Button>
+                <Button size="sm" onClick={() =>router.push("/sign-up")}>
+                  Get Started
+                </Button>
               </div>
             </nav>
           </div>
