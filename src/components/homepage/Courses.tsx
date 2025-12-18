@@ -1,7 +1,10 @@
+"use client"
 import { Star, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import {useRouter} from "next/navigation"
 
 const Courses = () => {
+  const router = useRouter()
   const courses = [
     {
       image:
@@ -129,7 +132,7 @@ const Courses = () => {
 
         {/* View All Button */}
         <div className="mt-12 text-center">
-          <Button variant="outline" size="lg">
+          <Button variant="outline" size="lg" onClick={()=>{router.push("/course")}}>
             View All Courses
             <ArrowRight className="h-5 w-5" />
           </Button>
