@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Open_Sans, Poppins } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "next-themes";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -30,14 +29,9 @@ export default function RootLayout({
       <body
         className={`${poppins.variable} ${openSans.variable} antialiased`}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
+      
           {children}
-        </ThemeProvider>
+        
       </body>
     </html>
   );

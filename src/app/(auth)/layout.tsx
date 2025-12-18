@@ -9,9 +9,9 @@ const images = [
 export default function AuthLayout({ children }: { children: React.ReactNode }) {
 
 return (
-  <div className="grid grid-cols-2 max-w-7xl mx-auto h-screen">
+  <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 max-w-7xl mx-auto h-screen">
 
-    <div className="border-r border-r-gray-300 justify-center items-center flex flex-col space-y-5">
+    <div className="border-r border-r-gray-300 justify-center items-center flex  flex-col space-y-5">
       <Carousel images={images} interval={1500} />
     </div>
 
